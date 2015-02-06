@@ -7,7 +7,7 @@ themes/*
 libraries/*
 
 # Exceptions for anything in the custom/ subfolders.
-!modules/CUSTOM
-!themes/CUSTOM
-!modules/CUSTOM_FEATURES
-!libraries/CUSTOM
+!modules/custom
+!themes/custom
+!modules/custom_features
+!libraries/custom
