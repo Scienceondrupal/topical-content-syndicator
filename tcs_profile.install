@@ -47,18 +47,17 @@ function tcs_profile_install() {
   include_once DRUPAL_ROOT . '/profiles/minimal/minimal.install';
   minimal_install();
 
-  // Run post-install tasks using cp_install as a soft (not .info file)
+  // Run post-install tasks using tcs_install as a soft (not .info file)
   // dependency.
-  return;
   module_enable(array("tcs_install"));
   module_load_include("api.inc", "tcs_install");
 
   // Create menu items (features export not very reliable for this.)
-  cp_install_api_create_menu_items();
+  tcs_install_api_create_menu_items();
   // Create taxonomy terms.
-  cp_install_api_create_taxonomy_terms();
+  tcs_install_api_create_taxonomy_terms();
   // Run "development-mode" tasks.
-  cp_install_api_devmode_set();
+  tcs_install_api_devmode_set();
 
   // Disable any menus we don't want, or move them around.
   db_update('block')

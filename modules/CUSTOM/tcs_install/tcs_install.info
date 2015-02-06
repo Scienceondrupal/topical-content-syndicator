@@ -1,0 +1,5 @@
+; @file
+; Metadata for Topical Content Syndicator: post-install.
+name = "Topical Content Syndicator: post-install"
+description = "Install/post-install tasks for a new TCS site"
+core = "7.x"
