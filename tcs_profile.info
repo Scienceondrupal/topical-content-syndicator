@@ -53,3 +53,5 @@ dependencies[] = views_ui
 ; Custom modules
 
 ; Features
+dependencies[] = tcs_access
+dependencies[] = tcs_config

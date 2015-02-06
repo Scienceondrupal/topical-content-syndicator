@@ -1,0 +1,13 @@
+name = TCS: access
+description = Access control: roles, permissions etc.
+core = 7.x
+package = TCS
+version = 7.x-1.0
+project = tcs_access
+dependencies[] = features
+features[features_api][] = api:2
+features[user_role][] = administrator
+features[user_role][] = manager
+features[user_role][] = member
+features[user_role][] = persona
+mtime = 1423223866

@@ -1,0 +1,11 @@
+name = TCS: config
+description = Site configuration: system variables and other miscellaneous settings.
+core = 7.x
+package = TCS
+version = 7.x-1.0
+project = tcs_config
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = admin_theme

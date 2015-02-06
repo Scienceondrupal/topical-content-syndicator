@@ -78,7 +78,7 @@ function tcs_install_menu() {
 /**
  * Page access callback: only permit UID=1 superuser to run their tasks.
  */
-function cp_install_administrator_not_superuser($perm, $expected_superuser_status = TRUE) {
+function tcs_install_administrator_not_superuser($perm, $expected_superuser_status = TRUE) {
   global $user;
   $is_superuser = ($user->uid == 1);
   return user_access($perm) && ($is_superuser == $expected_superuser_status);

@@ -164,6 +164,7 @@ function tcs_install_pages_post_install_uid1_submit($form, &$form_state) {
 
   // Bulk-create all accounts, regardless of where they've come from.
   foreach ($new_accounts as $account_edit) {
+    var_dump($account_edit);
     user_save(NULL, $account_edit);
   }
 
@@ -256,6 +257,7 @@ function tcs_install_pages_post_install_submit($form, &$form_state) {
  * Helper function to revert features and parse results.
  */
 function _tcs_install_pages_revert_features() {
+  $features_touched = 0;
   // Revert features and get results back.
   $results = tcs_install_api_revert_features();
   // Single result - something went badly wrong.
@@ -264,7 +266,6 @@ function _tcs_install_pages_revert_features() {
   }
   // Multiple results: report to the user.
   else {
-    $features_touched = 0;
     foreach ($results as $feature => $subresults) {
       foreach ($subresults as $status => $messages) {
         foreach ($messages as $component => $message) {
