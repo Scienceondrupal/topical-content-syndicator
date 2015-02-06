@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Topical Content Syndicator: install profile.
+ */
+
+define('TCS_PROFILE_DEFAULT_THEME', 'bootstrap')
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ * Consider using profile inheritance in the future e.g:
+ *  * www.phase2technology.com/blog
+ *     /inheriting-your-drupal-profile-from-an-existing-distribution/
+ *  * https://gist.github.com/waako/4431a06555d8d8bb486d
+ */
+function tcs_profile_install() {
+  // Copied verbatim from system.install:511.
+  variable_set("theme_default", TCS_PROFILE_DEFAULT_THEME);
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', TCS_PROFILE_DEFAULT_THEME)
+    ->execute();
+  // Then uninstall bartik.
+  db_update('system')
+    ->fields(array('status' => 0))
+    ->condition('type', 'theme')
+    ->condition('name', 'bartik')
+    ->execute();
+
+  // Store the files outside the sites/default codebase, to permit multi-site
+  // developers to work on this build without breaking paths to uploads.
+  variable_set('file_public_path', "sites/files/tcs");
+
+  // Enable the concept of an admin user role: should be created by features.
+  $admin_role = user_role_load_by_name("administrator");
+  if ($admin_role->rid) {
+    variable_set('user_admin_role', $admin_role->rid);
+    // Historically give admin role all permissions should've had thus far.
+    user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  }
+
+  // Run the minimal install profile.
+  include_once DRUPAL_ROOT . '/profiles/minimal/minimal.install';
+  minimal_install();
+
+  // Run post-install tasks using cp_install as a soft (not .info file)
+  // dependency.
+  module_enable(array("tcs_install"));
+  module_load_include("api.inc", "tcs_install");
+
+  // Create menu items (features export not very reliable for this.)
+  cp_install_api_create_menu_items();
+  // Create taxonomy terms.
+  cp_install_api_create_taxonomy_terms();
+  // Run "development-mode" tasks.
+  cp_install_api_devmode_set();
+
+  // Disable any menus we don't want, or move them around.
+  db_update('block')
+    ->condition('theme', TCS_PROFILE_DEFAULT_THEME)->condition('module', 'system')
+    ->condition('delta', array('navigation', 'management'), 'IN')
+    ->fields(array('status' => 0))
+    ->execute();
+  db_update('block')
+    ->condition('theme', TCS_PROFILE_DEFAULT_THEME)->condition('module', 'system')
+    ->condition('delta', 'help')
+    ->fields(array('region' => 'content'))
+    ->execute();
+}

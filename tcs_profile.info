@@ -1,0 +1,56 @@
+; @file
+; Metadata for Topical Content Syndicator: install profile.
+name = "Topical Content Syndicator"
+description = "Gather content from your community, mash it up and reshare."
+version = 1.x-dev
+core = 7.x
+
+; Module dependencies.
+dependencies[] = admin_menu
+dependencies[] = block
+dependencies[] = ctools
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = date_popup
+dependencies[] = date_tools
+dependencies[] = date_views
+dependencies[] = diff
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = fe_block
+dependencies[] = field
+dependencies[] = field_group
+dependencies[] = field_permissions
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = filter_perms
+dependencies[] = help
+dependencies[] = image
+dependencies[] = libraries
+dependencies[] = link
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = module_filter
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = pathauto
+dependencies[] = search
+dependencies[] = strongarm
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = token
+dependencies[] = update
+dependencies[] = user
+dependencies[] = views
+dependencies[] = views_ui
+
+; Custom modules
+
+; Features
