@@ -4,6 +4,7 @@
 ; Metadata.
 api = 2
 core = 7.x
+defaults[projects][subdir] = contrib
 
 ; Core (not strictly required, depending on how if you build with core.make.)
 projects[drupal][type] = core
