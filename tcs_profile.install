@@ -5,7 +5,7 @@
  * Topical Content Syndicator: install profile.
  */
 
-define('TCS_PROFILE_DEFAULT_THEME', 'bootstrap')
+define('TCS_PROFILE_DEFAULT_THEME', 'bootstrap');
 
 /**
  * Implements hook_install().
@@ -49,6 +49,7 @@ function tcs_profile_install() {
 
   // Run post-install tasks using cp_install as a soft (not .info file)
   // dependency.
+  return;
   module_enable(array("tcs_install"));
   module_load_include("api.inc", "tcs_install");
 
