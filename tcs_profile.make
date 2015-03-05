@@ -17,7 +17,7 @@ projects[ctools][version] = 1.4
 projects[date][version] = 2.8
 projects[devel][version] = 1.5
 projects[diff][version] = 3.2
-projects[entity][version] = 1.5
+projects[entity][version] = 1.6
 projects[entityreference][version] = 1.1
 projects[features][version] = 2.0
 projects[features_extra][version] = 1.0-beta1
@@ -30,7 +30,7 @@ projects[module_filter][version] = 2.0-alpha2
 projects[pathauto][version] = 1.2
 projects[strongarm][version] = 2.0
 projects[token][version] = 1.5
-projects[views][version] = 3.8
+projects[views][version] = 3.10
 
 ; d.o themes.
 projects[bootstrap][version] = "3.0"
