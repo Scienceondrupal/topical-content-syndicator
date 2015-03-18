@@ -23,6 +23,7 @@ projects[features][version] = 2.0
 projects[features_extra][version] = 1.0-beta1
 projects[field_group][version] = 1.4
 projects[filter_perms][version] = 1.0
+projects[jquery_update][version] = 2.5
 projects[libraries][version] = 2.2
 projects[link][version] = 1.2
 projects[maillog][version] = 1.x-dev
