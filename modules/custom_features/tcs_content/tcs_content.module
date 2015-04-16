@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TCS Content feature.
+ */
+
+include_once 'tcs_content.features.inc';
