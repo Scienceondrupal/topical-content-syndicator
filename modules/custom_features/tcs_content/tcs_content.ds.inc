@@ -39,6 +39,33 @@ function tcs_content_ds_field_settings_info() {
 }
 
 /**
+ * Implements hook_ds_custom_fields_info().
+ */
+function tcs_content_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'feed_item_toggle';
+  $ds_field->label = 'Toggle';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = 'feed_item|feed_item_list_item';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".nid-[node:nid]">More</button>',
+      'format' => 'full_html',
+    ),
+    'use_token' => 1,
+  );
+  $export['feed_item_toggle'] = $ds_field;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function tcs_content_ds_layout_settings_info() {
