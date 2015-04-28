@@ -9,12 +9,44 @@
  * Main styles
  */
 /* Main Content Region */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+.region-content {
+  /* Feed Item Listing */ }
+  .region-content ul.tcs-list-item {
+    padding-left: 0;
+    /* Feed Item Header */
+    /* Feed Item Footer */ }
+    .region-content ul.tcs-list-item li {
+      list-style-type: none; }
+    .region-content ul.tcs-list-item .group-header {
+      border-bottom: 0; }
+      .region-content ul.tcs-list-item .group-header h2 {
+        margin: 0.05em 0; }
+      .region-content ul.tcs-list-item .group-header button {
+        float: right;
+        width: 25px;
+        margin-left: 1em; }
+      .region-content ul.tcs-list-item .group-header button:before {
+        font-family: FontAwesome;
+        font-weight: bold;
+        content: "\f106"; }
+      .region-content ul.tcs-list-item .group-header button.collapsed:before {
+        font-family: FontAwesome;
+        font-weight: bold;
+        content: "\f107"; }
+    .region-content ul.tcs-list-item .group-footer {
+      padding-top: 0.3em;
+      padding-bottom: 0.2em; }
+      .region-content ul.tcs-list-item .group-footer .field-name-post-date {
+        width: 100%;
+        text-align: right;
+        font-size: 0.8em; }
+
 /**
  * Homepage styles
  */
 /* FONT PATH
  * -------------------------- */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.0.3");
@@ -1479,16 +1511,16 @@ h6, .h6 {
     font-size: 75%; }
 
 h1, .h1 {
-  font-size: 39px; }
+  font-size: 25px; }
 
 h2, .h2 {
-  font-size: 32px; }
+  font-size: 21px; }
 
 h3, .h3 {
-  font-size: 26px; }
+  font-size: 19px; }
 
 h4, .h4 {
-  font-size: 19px; }
+  font-size: 15px; }
 
 h5, .h5 {
   font-size: 15px; }
