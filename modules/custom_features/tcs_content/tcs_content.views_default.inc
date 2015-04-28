@@ -52,11 +52,6 @@ function tcs_content_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Broken/missing handler */
-  $handler->display->display_options['sorts']['field_feed_item_publication_date_value']['id'] = 'field_feed_item_publication_date_value';
-  $handler->display->display_options['sorts']['field_feed_item_publication_date_value']['table'] = 'field_data_field_feed_item_publication_date';
-  $handler->display->display_options['sorts']['field_feed_item_publication_date_value']['field'] = 'field_feed_item_publication_date_value';
-  $handler->display->display_options['sorts']['field_feed_item_publication_date_value']['order'] = 'DESC';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -79,6 +74,10 @@ function tcs_content_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'feed_items');
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['path'] = 'home';
   $export['list_feed_items'] = $view;
 
   return $export;
