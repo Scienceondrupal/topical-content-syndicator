@@ -6,9 +6,24 @@
 .region-content {
   ul.tcs-list-item {
     padding-left: 0;
+    li { list-style-type: none; } 
 
-    li {
-      list-style-type: none;
-    } 
+    .group-header {
+      border-bottom: 0;
+      h2 { 
+        margin: 0.05em 0; 
+      }
+      button { 
+        float: right;
+        width: 65px;
+        margin-left: 1em;
+      }
+      button:before { 
+        content: "Less";
+      }
+      button.collapsed:before { 
+        content: "More";
+      }
+    }
   }
 }
