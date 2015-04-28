@@ -18,12 +18,12 @@ function tcs_content_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'feed_item_list_item';
   $ds_fieldsetting->settings = array(
     'feed_item_toggle' => array(
-      'weight' => '1',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'title' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -55,8 +55,8 @@ function tcs_content_ds_custom_fields_info() {
   $ds_field->ui_limit = 'feed_item|feed_item_list_item';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".nid-[node:nid]">More</button>',
-      'format' => 'full_html',
+      'value' => '<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target=".nid-[node:nid]"></button>',
+      'format' => 'filtered_html',
     ),
     'use_token' => 1,
   );
@@ -81,8 +81,8 @@ function tcs_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'header' => array(
-        0 => 'title',
-        1 => 'feed_item_toggle',
+        0 => 'feed_item_toggle',
+        1 => 'title',
       ),
       'left' => array(
         2 => 'field_feed_item_description',
@@ -93,8 +93,8 @@ function tcs_content_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'title' => 'header',
       'feed_item_toggle' => 'header',
+      'title' => 'header',
       'field_feed_item_description' => 'left',
       'field_feed_item_link' => 'left',
       'post_date' => 'footer',
