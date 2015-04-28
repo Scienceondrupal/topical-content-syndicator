@@ -103,13 +103,14 @@ function tcs_content_field_default_field_instances() {
         'weight' => 1,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_feed_item_link',
     'label' => 'URL',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
-        'class' => '',
+        'class' => 'btn btn-primary btn-block',
         'configurable_title' => 0,
         'rel' => '',
         'target' => '_blank',
