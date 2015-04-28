@@ -25,7 +25,7 @@ function tcs_content_ds_field_settings_info() {
     'post_date' => array(
       'weight' => '3',
       'label' => 'hidden',
-      'format' => 'ds_post_date_short',
+      'format' => 'ds_post_date_medium',
     ),
   );
   $export['node|feed_item|feed_item_list_item'] = $ds_fieldsetting;
@@ -53,16 +53,16 @@ function tcs_content_ds_layout_settings_info() {
       ),
       'left' => array(
         1 => 'field_feed_item_description',
+        2 => 'field_feed_item_link',
       ),
       'footer' => array(
-        2 => 'field_feed_item_link',
         3 => 'post_date',
       ),
     ),
     'fields' => array(
       'title' => 'header',
       'field_feed_item_description' => 'left',
-      'field_feed_item_link' => 'footer',
+      'field_feed_item_link' => 'left',
       'post_date' => 'footer',
     ),
     'classes' => array(),
