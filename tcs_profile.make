@@ -25,6 +25,7 @@ projects[feeds][version] = 2.0-alpha8
 projects[feeds_tamper][version] = 1.0
 projects[field_group][version] = 1.4
 projects[filter_perms][version] = 1.0
+projects[job_scheduler][version] = 2.0-alpha3
 projects[jquery_update][version] = 2.5
 projects[libraries][version] = 2.2
 projects[link][version] = 1.2
