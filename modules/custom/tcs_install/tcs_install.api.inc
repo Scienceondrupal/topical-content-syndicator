@@ -299,7 +299,7 @@ function tcs_install_api_devmode_set() {
  * Run tasks to turn site into "production mode".
  */
 function tcs_install_api_devmode_unset() {
-  // Disable some modules
+  // Disable some modules.
   $modules = array("devel", "coder", "maillog", "views_ui");
   module_disable($modules);
   drupal_uninstall_modules($modules);
