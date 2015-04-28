@@ -17,13 +17,18 @@ function tcs_content_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'feed_item';
   $ds_fieldsetting->view_mode = 'feed_item_list_item';
   $ds_fieldsetting->settings = array(
+    'feed_item_toggle' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'title' => array(
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'post_date' => array(
-      'weight' => '3',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'ds_post_date_medium',
     ),
@@ -50,17 +55,19 @@ function tcs_content_ds_layout_settings_info() {
     'regions' => array(
       'header' => array(
         0 => 'title',
+        1 => 'feed_item_toggle',
       ),
       'left' => array(
-        1 => 'field_feed_item_description',
-        2 => 'field_feed_item_link',
+        2 => 'field_feed_item_description',
+        3 => 'field_feed_item_link',
       ),
       'footer' => array(
-        3 => 'post_date',
+        4 => 'post_date',
       ),
     ),
     'fields' => array(
       'title' => 'header',
+      'feed_item_toggle' => 'header',
       'field_feed_item_description' => 'left',
       'field_feed_item_link' => 'left',
       'post_date' => 'footer',
@@ -75,6 +82,8 @@ function tcs_content_ds_layout_settings_info() {
       ),
       'left' => array(
         'panel-body' => 'panel-body',
+        'collapse' => 'collapse',
+        'nid-[node:nid]' => 'nid-[node:nid]',
       ),
       'footer' => array(
         'panel-footer' => 'panel-footer',
