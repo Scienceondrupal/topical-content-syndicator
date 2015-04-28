@@ -4,4 +4,11 @@
 
 /* Main Content Region */
 .region-content {
+  ul.tcs-list-item {
+    padding-left: 0;
+
+    li {
+      list-style-type: none;
+    } 
+  }
 }
