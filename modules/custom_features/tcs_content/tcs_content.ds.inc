@@ -65,7 +65,21 @@ function tcs_content_ds_layout_settings_info() {
       'field_feed_item_link' => 'left',
       'post_date' => 'footer',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'panel' => 'panel',
+        'panel-default' => 'panel-default',
+      ),
+      'header' => array(
+        'panel-heading' => 'panel-heading',
+      ),
+      'left' => array(
+        'panel-body' => 'panel-body',
+      ),
+      'footer' => array(
+        'panel-footer' => 'panel-footer',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'left' => 'div',
