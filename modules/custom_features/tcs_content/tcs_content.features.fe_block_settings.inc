@@ -21,10 +21,10 @@ function tcs_content_default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'bootstrap' => array(
+      'bootstrap_tcs' => array(
         'region' => 'content',
         'status' => 1,
-        'theme' => 'bootstrap',
+        'theme' => 'bootstrap_tcs',
         'weight' => 0,
       ),
     ),
