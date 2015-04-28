@@ -33,6 +33,6 @@ projects[token][version] = 1.5
 projects[views][version] = 3.10
 
 ; d.o themes.
-projects[bootstrap][version] = "3.0"
+projects[bootstrap][version] = "3.1-beta2"
 
 ;; Libraries here.
