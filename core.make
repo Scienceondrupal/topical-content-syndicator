@@ -9,3 +9,4 @@ projects[drupal][version] = 7.34
 projects[tcs_profile][type] = profile
 projects[tcs_profile][download][type] = git
 projects[tcs_profile][download][url] = git@github.com:bluedotlab/topical-content-syndicator.git
+projects[tcs_profile][download][branch] = merge-1202-1203

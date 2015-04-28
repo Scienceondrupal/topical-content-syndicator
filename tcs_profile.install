@@ -5,7 +5,7 @@
  * Topical Content Syndicator: install profile.
  */
 
-define('TCS_PROFILE_DEFAULT_THEME', 'bootstrap');
+define('TCS_PROFILE_DEFAULT_THEME', 'bootstrap_tcs');
 
 /**
  * Implements hook_install().
