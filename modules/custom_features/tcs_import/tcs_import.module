@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TCS Import feature.
+ */
+
+include_once 'tcs_import.features.inc';
