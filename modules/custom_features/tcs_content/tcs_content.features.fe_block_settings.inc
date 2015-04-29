@@ -22,8 +22,8 @@ function tcs_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'bootstrap_tcs' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bootstrap_tcs',
         'weight' => 0,
       ),

@@ -39,6 +39,12 @@ projects[token][version] = 1.5
 projects[views][version] = 3.10
 projects[views_infinite_scroll][version] = 1.1
 
+; Libraries
+libraries[autopager][download][type] = "get"
+libraries[autopager][download][url] = "http://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js"
+libraries[autopager][directory_name] = "js"
+libraries[autopager][destination] = "/modules/contrib/views_infinite_scroll"
+
 ; d.o themes.
 projects[bootstrap][version] = "3.1-beta2"
 
