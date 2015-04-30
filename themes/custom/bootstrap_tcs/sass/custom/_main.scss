@@ -6,41 +6,44 @@
 .region-content {
 
   /* Feed Item Listing */
-  ul.tcs-list-item {
-    padding-left: 0;
-    li { list-style-type: none; } 
+  .view-list-feed-items {
+    /* List */
+    ul.tcs-list-item {
+      padding-left: 0;
+      li { list-style-type: none; } 
 
-    /* Feed Item Header */
-    .group-header {
-      border-bottom: 0;
-      h2 { 
-        margin: 0.05em 0; 
+      /* Feed Item Header */
+      .group-header {
+        border-bottom: 0;
+        h2 { 
+          margin: 0.05em 0; 
+        }
+        button { 
+          float: right;
+          width: 25px;
+          margin-left: 1em;
+        }
+        button:before { 
+          font-family: FontAwesome;
+          font-weight: bold;
+          content: "\f106";
+        }
+        button.collapsed:before { 
+          font-family: FontAwesome;
+          font-weight: bold;
+          content: "\f107";
+        }
       }
-      button { 
-        float: right;
-        width: 25px;
-        margin-left: 1em;
-      }
-      button:before { 
-        font-family: FontAwesome;
-        font-weight: bold;
-        content: "\f106";
-      }
-      button.collapsed:before { 
-        font-family: FontAwesome;
-        font-weight: bold;
-        content: "\f107";
-      }
-    }
 
-    /* Feed Item Footer */
-    .group-footer {
-      padding-top: 0.3em;
-      padding-bottom: 0.2em;
-      .field-name-post-date {
-        width: 100%;
-        text-align: right;
-        font-size: 0.8em;
+      /* Feed Item Footer */
+      .group-footer {
+        padding-top: 0.3em;
+        padding-bottom: 0.2em;
+        .field-name-post-date {
+          width: 100%;
+          text-align: right;
+          font-size: 0.8em;
+        }
       }
     }
   }
