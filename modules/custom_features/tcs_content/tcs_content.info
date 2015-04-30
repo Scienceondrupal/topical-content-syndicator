@@ -5,6 +5,7 @@ package = TCS
 version = 7.x-1.1
 project = tcs_content
 dependencies[] = ds
+dependencies[] = ds_extras
 dependencies[] = fe_block
 dependencies[] = link
 dependencies[] = node
