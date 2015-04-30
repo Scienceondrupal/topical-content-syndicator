@@ -289,7 +289,7 @@ function tcs_install_api_devmode_set() {
   drupal_set_message("Putting site into development mode");
 
   // Enable some developer modules and configure them.
-  module_enable(array("devel", "coder", "maillog"));
+  module_enable(array("devel", "coder", "maillog", "views_ui", "ds_ui", "rules_admin"));
   variable_set("maillog_send", "0");
   variable_set("maillog_log", "1");
   variable_set("maillog_devel", "1");
@@ -300,7 +300,7 @@ function tcs_install_api_devmode_set() {
  */
 function tcs_install_api_devmode_unset() {
   // Disable some modules.
-  $modules = array("devel", "coder", "maillog", "views_ui");
+  $modules = array("devel", "coder", "maillog", "views_ui", "ds_ui", "rules_admin", "field_ui");
   module_disable($modules);
   drupal_uninstall_modules($modules);
 }
