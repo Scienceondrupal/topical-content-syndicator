@@ -18,7 +18,7 @@ function tcs_content_default_fe_block_settings() {
     'delta' => 'list_feed_items-feed_items',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '<front>',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'bootstrap_tcs' => array(
@@ -28,8 +28,8 @@ function tcs_content_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '<none>',
-    'visibility' => 1,
+    'title' => '',
+    'visibility' => 0,
   );
 
   return $export;

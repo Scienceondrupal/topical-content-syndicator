@@ -55,8 +55,8 @@ function tcs_content_ds_custom_fields_info() {
   $ds_field->ui_limit = 'feed_item|feed_item_list_item';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target=".nid-[node:nid]"></button>',
-      'format' => 'filtered_html',
+      'value' => '<button class="btn btn-info btn-xs collapsed" type="button" data-toggle="collapse" data-target=".nid-[node:nid]"></button>',
+      'format' => 'full_html',
     ),
     'use_token' => 1,
   );
@@ -99,23 +99,7 @@ function tcs_content_ds_layout_settings_info() {
       'field_feed_item_link' => 'left',
       'post_date' => 'footer',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        'panel' => 'panel',
-        'panel-default' => 'panel-default',
-      ),
-      'header' => array(
-        'panel-heading' => 'panel-heading',
-      ),
-      'left' => array(
-        'panel-body' => 'panel-body',
-        'collapse' => 'collapse',
-        'nid-[node:nid]' => 'nid-[node:nid]',
-      ),
-      'footer' => array(
-        'panel-footer' => 'panel-footer',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'header' => 'div',
       'left' => 'div',
