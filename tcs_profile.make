@@ -23,6 +23,7 @@ projects[entityreference][version] = 1.1
 projects[features][version] = 2.0
 projects[features_extra][version] = 1.0-beta1
 projects[feeds][version] = 2.0-alpha8
+projects[feeds_rules][version] = 1.x-dev
 projects[feeds_tamper][version] = 1.0
 projects[field_group][version] = 1.4
 projects[filter_perms][version] = 1.0

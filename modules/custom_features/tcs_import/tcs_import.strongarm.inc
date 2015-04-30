@@ -14,7 +14,7 @@ function tcs_import_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_feed_source';
-  $strongarm->value = 'edit-menu';
+  $strongarm->value = 'edit-submission';
   $export['additional_settings__active_tab_feed_source'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -49,9 +49,7 @@ function tcs_import_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'feeds_reschedule';
-  $strongarm->value = array(
-    'feed_source_feed_importer' => 'feed_source_feed_importer',
-  );
+  $strongarm->value = FALSE;
   $export['feeds_reschedule'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -104,7 +102,7 @@ function tcs_import_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_feed_source';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['node_preview_feed_source'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -42,7 +42,7 @@ function tcs_import_feeds_tamper_default() {
   $feeds_tamper->source = 'description';
   $feeds_tamper->plugin_id = 'strip_tags';
   $feeds_tamper->settings = array(
-    'allowed_tags' => '<a>',
+    'allowed_tags' => '',
   );
   $feeds_tamper->weight = 2;
   $feeds_tamper->description = 'Strip tags';
