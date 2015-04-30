@@ -30,31 +30,9 @@ function tcs_import_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: user-menu_feed-source:node/add/feed-source
-  $menu_links['user-menu_feed-source:node/add/feed-source'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/add/feed-source',
-    'router_path' => 'node/add/feed-source',
-    'link_title' => 'Feed Source',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_feed-source:node/add/feed-source',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'parent_identifier' => 'user-menu_add-content:node/add',
-  );
   // Translatables
   // Included for use with string extractors like potx.
   t('Add');
-  t('Feed Source');
 
 
   return $menu_links;
