@@ -24,7 +24,8 @@
       .region-content .view-list-feed-items ul.tcs-list-item .group-header {
         border-bottom: 0; }
         .region-content .view-list-feed-items ul.tcs-list-item .group-header h2 {
-          margin: 0.05em 0; }
+          margin: 0.05em 0;
+          cursor: pointer; }
         .region-content .view-list-feed-items ul.tcs-list-item .group-header button {
           float: right;
           width: 25px;
