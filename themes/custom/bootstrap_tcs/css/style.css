@@ -12,35 +12,49 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 .region-content {
   /* Feed Item Listing */ }
-  .region-content ul.tcs-list-item {
-    padding-left: 0;
-    /* Feed Item Header */
-    /* Feed Item Footer */ }
-    .region-content ul.tcs-list-item li {
-      list-style-type: none; }
-    .region-content ul.tcs-list-item .group-header {
-      border-bottom: 0; }
-      .region-content ul.tcs-list-item .group-header h2 {
-        margin: 0.05em 0; }
-      .region-content ul.tcs-list-item .group-header button {
-        float: right;
-        width: 25px;
-        margin-left: 1em; }
-      .region-content ul.tcs-list-item .group-header button:before {
-        font-family: FontAwesome;
-        font-weight: bold;
-        content: "\f106"; }
-      .region-content ul.tcs-list-item .group-header button.collapsed:before {
-        font-family: FontAwesome;
-        font-weight: bold;
-        content: "\f107"; }
-    .region-content ul.tcs-list-item .group-footer {
-      padding-top: 0.3em;
-      padding-bottom: 0.2em; }
-      .region-content ul.tcs-list-item .group-footer .field-name-post-date {
-        width: 100%;
-        text-align: right;
-        font-size: 0.8em; }
+  .region-content .view-list-feed-items {
+    /* List */ }
+    .region-content .view-list-feed-items ul.tcs-list-item {
+      padding-left: 0;
+      /* Feed Item Header */
+      /* Feed Item Description */
+      /* Feed Item Footer */ }
+      .region-content .view-list-feed-items ul.tcs-list-item li {
+        list-style-type: none; }
+      .region-content .view-list-feed-items ul.tcs-list-item .group-header {
+        border-bottom: 0; }
+        .region-content .view-list-feed-items ul.tcs-list-item .group-header h2 {
+          margin: 0.05em 0; }
+        .region-content .view-list-feed-items ul.tcs-list-item .group-header button {
+          float: right;
+          width: 25px;
+          margin-left: 1em; }
+        .region-content .view-list-feed-items ul.tcs-list-item .group-header button:before {
+          font-family: FontAwesome;
+          font-weight: bold;
+          content: "\f106"; }
+        .region-content .view-list-feed-items ul.tcs-list-item .group-header button.collapsed:before {
+          font-family: FontAwesome;
+          font-weight: bold;
+          content: "\f107"; }
+      .region-content .view-list-feed-items ul.tcs-list-item .group-left {
+        /* Text description */
+        /* Button */ }
+        .region-content .view-list-feed-items ul.tcs-list-item .group-left .field-name-field-feed-item-description {
+          margin-bottom: 1em; }
+      .region-content .view-list-feed-items ul.tcs-list-item .group-footer {
+        padding-top: 0.3em;
+        padding-bottom: 0.2em; }
+        .region-content .view-list-feed-items ul.tcs-list-item .group-footer .field-name-post-date {
+          width: 100%;
+          text-align: right;
+          font-size: 0.8em; }
+
+/* JS-specific */
+/* Feed Item Listing */
+/* Pager */
+html.js .view-list-feed-items .pager {
+  display: none; }
 
 /**
  * Homepage styles
