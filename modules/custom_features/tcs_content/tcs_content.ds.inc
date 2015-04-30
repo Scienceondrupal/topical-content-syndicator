@@ -56,7 +56,7 @@ function tcs_content_ds_custom_fields_info() {
   $ds_field->properties = array(
     'code' => array(
       'value' => '<button class="btn btn-info btn-xs collapsed" type="button" data-toggle="collapse" data-target=".nid-[node:nid]"></button>',
-      'format' => 'filtered_html',
+      'format' => 'full_html',
     ),
     'use_token' => 1,
   );

@@ -6,6 +6,13 @@
  */
 
 /**
+ * HTML preprocess
+ */
+function bootstrap_tcs_preprocess_html(&$vars) {
+  /* Variable preprocess here */
+}
+
+/**
  * Page preprocess
  */
 function bootstrap_tcs_preprocess_page(&$vars) {
