@@ -34,7 +34,7 @@ function tcs_import_menu_default_menu_links() {
   $menu_links['user-menu_source-feed:node/add/feed-source'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'node/add/feed-source',
-    'router_path' => 'node/add/feed-source',
+    'router_path' => 'node/add',
     'link_title' => 'Source Feed',
     'options' => array(
       'attributes' => array(
@@ -49,7 +49,7 @@ function tcs_import_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
-    'parent_identifier' => 'user-menu_add:node/add',
+    'parent_identifier' => 'user-menu_add-content:node/add',
   );
   // Translatables
   // Included for use with string extractors like potx.
