@@ -43,7 +43,12 @@
           margin-bottom: 1em;
         }
         /* Button */
-        .field-name-field-feed-item-link {
+        .field-name-field-feed-item-link a:after {
+          font-family: FontAwesome;
+          content: "\f08e";
+          font-size: 0.7em;
+          vertical-align: text-top;
+          padding-left: 0.5em; 
         }
       }
 
