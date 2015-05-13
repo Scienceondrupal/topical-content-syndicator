@@ -13,7 +13,13 @@ function tcs_content_field_default_field_instances() {
   // Exported field_instance: 'node-feed_item-field_feed_item_description'
   $field_instances['node-feed_item-field_feed_item_description'] = array(
     'bundle' => 'feed_item',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'summary' => '',
+        'value' => 'No description provided.',
+        'format' => 'plain_text',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(

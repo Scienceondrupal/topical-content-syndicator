@@ -20,6 +20,20 @@ function bootstrap_tcs_preprocess_page(&$vars) {
 }
 
 /**
+ * Page preprocess
+ */
+function bootstrap_tcs_process_field(&$vars) {
+  switch ($vars['element']['#field_name']) {
+    case 'title':
+      /* Toggle description when clicking on title */
+      $nid = $vars['element']['#object']->nid;
+      $vars['attributes'] = 'data-target=".nid-' . $nid . '"';
+      $vars['attributes'] .= 'data-toggle="collapse"';
+    break;
+  }
+}
+
+/**
  * Block process - classes and titles
  * - preprocess not used as some blocks not available
  */
