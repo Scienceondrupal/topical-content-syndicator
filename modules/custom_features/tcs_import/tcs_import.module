@@ -5,3 +5,17 @@
  */
 
 include_once 'tcs_import.features.inc';
+
+/**
+ * Redirect the Feeds Import Batch to the site homepage.
+ *
+ * @param array $batch
+ *   The Batch process
+ */
+function tcs_import_batch_alter(&$batch) {
+  // If this batch came from adding a source Feed.
+  if('node/add/feed-source' == $batch['source_url']) {
+    // Redirect to the homepage.
+    $batch['form_state']['redirect'] = '<front>';
+  }
+}

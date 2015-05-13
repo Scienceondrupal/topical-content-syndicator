@@ -130,5 +130,12 @@ function tcs_content_strongarm() {
   $strongarm->value = 'feeditem/[node:title]';
   $export['pathauto_node_feed_item_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_frontpage';
+  $strongarm->value = 'home';
+  $export['site_frontpage'] = $strongarm;
+
   return $export;
 }

@@ -31,7 +31,7 @@ function tcs_content_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['quantity'] = '0';
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['class'] = 'tcs-list-item';
   $handler->display->display_options['style_options']['wrapper_class'] = 'tcs-list-items';
@@ -76,7 +76,7 @@ function tcs_content_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'feed_items');
 
   /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler = $view->new_display('page', 'Page', 'homepage');
   $handler->display->display_options['path'] = 'home';
   $export['list_feed_items'] = $view;
 

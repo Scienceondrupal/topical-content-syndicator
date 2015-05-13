@@ -22,13 +22,13 @@ function tcs_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'feed_item_list_item' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 2,
       ),
       'full' => array(
@@ -85,7 +85,7 @@ function tcs_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_url',
+        'type' => 'link_default',
         'weight' => 1,
       ),
       'feed_item_list_item' => array(

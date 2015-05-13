@@ -63,7 +63,7 @@ function tcs_import_feeds_importer_default() {
             'unique' => FALSE,
           ),
         ),
-        'input_format' => 'feed_item_description',
+        'input_format' => 'plain_text',
         'author' => '1',
         'authorize' => 1,
         'skip_hash_check' => 0,
