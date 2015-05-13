@@ -1,5 +1,5 @@
 name = TCS Import
-description = Feed Source content type & importing to Feed Item
+description = Source Feed content type & importing to Feed Item
 core = 7.x
 package = TCS
 version = 7.x-1.0

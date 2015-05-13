@@ -15,7 +15,7 @@ function tcs_import_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'feed_source_feed_importer';
   $feeds_importer->config = array(
-    'name' => 'Feed Source Importer',
+    'name' => 'Source Feed Importer',
     'description' => 'Import RSS or Atom feeds, create Feed Item nodes from feed items.',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
