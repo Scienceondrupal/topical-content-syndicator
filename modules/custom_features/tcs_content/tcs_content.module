@@ -5,3 +5,74 @@
  */
 
 include_once 'tcs_content.features.inc';
+
+/**
+ * Implements hooks_form_FORM_ID_alter().
+ */
+function tcs_content_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+
+  // Ensure there is a View w/ a name we can check.
+  if (!empty($form_state['view']->name)) {
+
+    // If the view is the 'list_feed_items' View.
+    if ('list_feed_items' == $form_state['view']->name) {
+      _tcs_content_list_feed_items_exposed_form_alter($form, $form_state);
+
+      // If a filter was set, show the breadcrumbs.
+      $query_params = drupal_get_query_parameters();
+      if (!empty($query_params)) {
+        $filter = check_plain($query_params['filter']);
+        // Only show breadcrumb when an actual filter was submitted.
+        if ('' != $filter) {
+          $crumbs = array();
+          $crumbs[] = l(t('Home'), '<front>');
+          $crumbs[] = t('@label', array('@label' => $filter));
+          drupal_set_breadcrumb($crumbs);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Hide fields, set custom form submit.
+ */
+function _tcs_content_list_feed_items_exposed_form_alter(&$form, &$form_state) {
+  // Create the data for which fields to hide and which field has the value.
+  $hidden_filter_field_data = array(
+    'tcs_content_hidden_exposed_filters' => array(
+      'value' => 'filter',
+      'hide' => array(
+        'd',
+      ),
+    ),
+  );
+
+  // Add hidden filter field data to the form_state.
+  $form_state = $form_state + $hidden_filter_field_data;
+
+  // Hide the fields.
+  foreach ($form_state['tcs_content_hidden_exposed_filters']['hide'] as $hide_field) {
+    $form[$hide_field]['#type'] = 'hidden';
+  }
+
+  // Add the custom submit handler as the first submit function to run.
+  array_unshift($form['#submit'], '_tcs_content_list_feed_items_exposed_form_submit');
+}
+
+/**
+ * Populate hidden form fields with data from visible fields before submission.
+ */
+function _tcs_content_list_feed_items_exposed_form_submit($form, &$form_state) {
+
+  // Get the value entered by the user into the one visible filter field.
+  $value_for_hidden_fields = $form_state['values'][$form_state['tcs_content_hidden_exposed_filters']['value']];
+
+  // Get the field names for all the fields hidden in this view.
+  $hidden_fields = $form_state['tcs_content_hidden_exposed_filters']['hide'];
+
+  // Assign the search string to the hidden fields.
+  foreach ($hidden_fields as $hidden_field) {
+    $form_state['values'][$hidden_field] = $value_for_hidden_fields;
+  }
+}

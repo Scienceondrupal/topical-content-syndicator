@@ -12,6 +12,26 @@ function tcs_content_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['views--exp-list_feed_items-homepage'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => '-exp-list_feed_items-homepage',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap_tcs' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'bootstrap_tcs',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Search',
+    'visibility' => 0,
+  );
+
   $export['views-list_feed_items-feed_items'] = array(
     'cache' => -1,
     'custom' => 0,
