@@ -20,7 +20,7 @@ function tcs_content_form_views_exposed_form_alter(&$form, &$form_state, $form_i
 
       // If a filter was set, show the breadcrumbs.
       $query_params = drupal_get_query_parameters();
-      if (!empty($query_params)) {
+      if (!empty($query_params['filter'])) {
         $filter = check_plain($query_params['filter']);
         // Only show breadcrumb when an actual filter was submitted.
         if ('' != $filter) {
