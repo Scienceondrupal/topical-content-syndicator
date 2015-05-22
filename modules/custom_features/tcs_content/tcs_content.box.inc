@@ -19,7 +19,7 @@ function tcs_content_default_box() {
   $box->description = 'Trigger button for the left sidebar on mobile';
   $box->options = array(
     'body' => array(
-      'value' => '<button type="button" class="offcanvas-toggle btn btn-info btn-sm" data-toggle="offcanvas" data-target=".region-sidebar-first">Filter</button>',
+      'value' => '<button type="button" class="offcanvas-toggle btn btn-info btn-sm hidden-sm hidden-md hidden-lg" data-toggle="offcanvas" data-target=".region-sidebar-first">Filter</button>',
       'format' => 'full_html',
     ),
   );
