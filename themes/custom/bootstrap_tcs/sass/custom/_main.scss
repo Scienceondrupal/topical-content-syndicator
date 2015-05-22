@@ -65,6 +65,20 @@
     }
 
   }
+
+  /* Sidebar trigger */
+  #boxes-box-tcs_content_side_trigger {
+    margin-bottom: 1em;
+
+    button { 
+      font-size: 0.9em; 
+    }
+    button:after {
+      font-family: FontAwesome;
+      content: "\f061";
+      padding-left: 0.3em;
+    }
+  }
 }
 
 /* JS-specific */
