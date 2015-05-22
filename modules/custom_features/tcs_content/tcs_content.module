@@ -7,6 +7,15 @@
 include_once 'tcs_content.features.inc';
 
 /**
+ * Preprocess page
+ */
+function tcs_content_preprocess_page(&$vars) {
+  // Load Bootstrap-Offcanvas library
+  drupal_add_js(libraries_get_path('Bootstrap-Offcanvas') . '/dist/js/bootstrap.offcanvas.min.js', 'file');
+  drupal_add_css(libraries_get_path('Bootstrap-Offcanvas') . '/dist/css/bootstrap.offcanvas.min.css', 'file');
+}
+
+/**
  * Implements hooks_form_FORM_ID_alter().
  */
 function tcs_content_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
