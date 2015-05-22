@@ -16,6 +16,16 @@ function tcs_content_preprocess_page(&$vars) {
 }
 
 /**
+ * Preprocess region
+ */
+function tcs_content_preprocess_region(&$vars) {
+  // Add Bootstrap-Offcanvas class to left sideba
+  if ($vars['region'] == 'sidebar_first') {
+    $vars['classes_array'][] = 'navbar-offcanvas';
+  }
+}
+
+/**
  * Implements hooks_form_FORM_ID_alter().
  */
 function tcs_content_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
