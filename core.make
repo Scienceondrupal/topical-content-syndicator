@@ -4,7 +4,7 @@
 api = 2
 core = 7.x
 
-projects[drupal][version] = 7.34
+projects[drupal][version] = 7.35
 
 projects[tcs_profile][type] = profile
 projects[tcs_profile][download][type] = git

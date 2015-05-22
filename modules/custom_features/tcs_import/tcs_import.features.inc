@@ -25,7 +25,7 @@ function tcs_import_ctools_plugin_api($module = NULL, $api = NULL) {
 function tcs_import_node_info() {
   $items = array(
     'feed_source' => array(
-      'name' => t('Feed Source'),
+      'name' => t('Source Feed'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
