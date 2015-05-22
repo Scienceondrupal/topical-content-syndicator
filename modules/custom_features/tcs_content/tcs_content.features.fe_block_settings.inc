@@ -25,10 +25,10 @@ function tcs_content_default_fe_block_settings() {
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'bootstrap_tcs',
-        'weight' => 0,
+        'weight' => -10,
       ),
     ),
-    'title' => 'Search',
+    'title' => 'Filters',
     'visibility' => 0,
   );
 
