@@ -13,6 +13,7 @@ projects[drupal][version] = 7.34
 ; d.o modules.
 projects[admin_menu][version] = 3.0-rc4
 projects[block_class][version] = 2.1
+projects[boxes][version] = 1.2
 projects[coder][version] = 2.2
 projects[ctools][version] = 1.7
 projects[date][version] = 2.8
