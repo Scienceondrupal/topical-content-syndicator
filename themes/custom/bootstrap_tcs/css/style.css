@@ -11,7 +11,8 @@
 /* Main Content Region */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 .region-content {
-  /* Feed Item Listing */ }
+  /* Feed Item Listing */
+  /* Sidebar trigger */ }
   .region-content .view-list-feed-items {
     /* List */ }
     .region-content .view-list-feed-items ul.tcs-list-item {
@@ -56,6 +57,13 @@
           width: 100%;
           text-align: right;
           font-size: 0.8em; }
+  .region-content #boxes-box-tcs_content_side_trigger button {
+    font-size: 0.9em;
+    margin-bottom: 1.5em; }
+  .region-content #boxes-box-tcs_content_side_trigger button:after {
+    font-family: FontAwesome;
+    content: "\f061";
+    padding-left: 0.3em; }
 
 /* JS-specific */
 /* Feed Item Listing */
