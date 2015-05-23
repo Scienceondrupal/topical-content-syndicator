@@ -14,8 +14,10 @@
       var default_text = 'Your search terms…';
       $list_feed_items_form = $('form#views-exposed-form-list-feed-items-homepage');
       $list_feed_items_filter = $list_feed_items_form.find('input#edit-filter');
-      // Set the default text.
-      $list_feed_items_filter.val(default_text);
+      // Set the default text, only if it's blank.
+      if ('' == $list_feed_items_filter.val()) {
+        $list_feed_items_filter.val(default_text);
+      }
       // On click, remove default text if default text is the value.
       $list_feed_items_filter.click(function() {
         if (default_text == $list_feed_items_filter.val()) {

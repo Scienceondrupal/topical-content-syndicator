@@ -40,12 +40,21 @@ function tcs_content_form_views_exposed_form_alter(&$form, &$form_state, $form_i
       // If a filter was set, show the breadcrumbs.
       $query_params = drupal_get_query_parameters();
       if (!empty($query_params['filter'])) {
+
         $filter = check_plain($query_params['filter']);
+
+        // Prepopulate the filter search text box.
+        $form['filter']['#default_value'] = $filter;
+
+        
         // Only show breadcrumb when an actual filter was submitted.
         if ('' != $filter) {
           $crumbs = array();
           $crumbs[] = l(t('Home'), '<front>');
-          $crumbs[] = t('@label', array('@label' => $filter));
+          $crumbs[] = array(
+            'data' => t('@label', array('@label' => $filter)),
+            'class' => array('active'),
+          );
           drupal_set_breadcrumb($crumbs);
         }
       }
