@@ -61,3 +61,44 @@ function bootstrap_tcs_process_block(&$vars) {
 function bootstrap_tcs_menu_tree__main_menu(&$variables) {
  return '<ul class="nav navbar-nav">' . $variables['tree'] . '</ul>';
 }
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ */
+function bootstrap_tcs_preprocess_breadcrumb(&$variables) {
+  $breadcrumb = &$variables['breadcrumb'];
+
+  // Optionally get rid of the homepage link.
+  $show_breadcrumb_home = theme_get_setting('bootstrap_breadcrumb_home');
+  if (!$show_breadcrumb_home) {
+    array_shift($breadcrumb);
+  }
+}
+
+/**
+ * Overrides theme_breadcrumb().
+ *
+ * Print breadcrumbs as an ordered list.
+ * Removes the trailing slash.
+ */
+function bootstrap_tcs_breadcrumb($variables) {
+  $output = '';
+  $breadcrumb = $variables['breadcrumb'];
+  
+  // The bootstrap_preprocess_breadcrumb() tacks on an extra crumb.
+  // Removes the trailing slash.
+  array_pop($breadcrumb);
+
+  // Determine if we are to display the breadcrumb.
+  $bootstrap_breadcrumb = theme_get_setting('bootstrap_breadcrumb');
+  if (($bootstrap_breadcrumb == 1 || ($bootstrap_breadcrumb == 2 && arg(0) == 'admin')) && !empty($breadcrumb)) {
+    $output = theme('item_list', array(
+      'attributes' => array(
+        'class' => array('breadcrumb'),
+      ),
+      'items' => $breadcrumb,
+      'type' => 'ol',
+    ));
+  }
+  return $output;
+}
