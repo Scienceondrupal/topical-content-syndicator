@@ -19,7 +19,7 @@ function tcs_content_default_fe_block_settings() {
     'delta' => 'tcs_content_side_trigger',
     'module' => 'boxes',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
       'bootstrap_tcs' => array(
@@ -30,7 +30,7 @@ function tcs_content_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['views--exp-list_feed_items-homepage'] = array(
@@ -40,7 +40,7 @@ function tcs_content_default_fe_block_settings() {
     'delta' => '-exp-list_feed_items-homepage',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
       'bootstrap_tcs' => array(
@@ -51,7 +51,7 @@ function tcs_content_default_fe_block_settings() {
       ),
     ),
     'title' => 'Filters',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['views-list_feed_items-feed_items'] = array(
