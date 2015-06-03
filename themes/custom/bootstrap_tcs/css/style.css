@@ -12,7 +12,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 .region-content {
   /* Feed Item Listing */
-  /* Sidebar trigger */ }
+  /* Sidebar Trigger */ }
   .region-content .view-list-feed-items {
     /* List */ }
     .region-content .view-list-feed-items ul.tcs-list-item {
@@ -64,6 +64,11 @@
     font-family: FontAwesome;
     content: "\f061";
     padding-left: 0.3em; }
+  .region-content #boxes-box-tcs_content_side_trigger .boxes-box-controls {
+    display: none; }
+
+.region-sidebar-first {
+  overflow-y: auto; }
 
 /* JS-specific */
 /* Feed Item Listing */
