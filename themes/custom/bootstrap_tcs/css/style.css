@@ -11,7 +11,8 @@
 /* Main Content Region */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 .region-content {
-  /* Feed Item Listing */ }
+  /* Feed Item Listing */
+  /* Create Source Feed */ }
   .region-content .view-list-feed-items {
     /* List */ }
     .region-content .view-list-feed-items ul.tcs-list-item {
@@ -56,6 +57,8 @@
           width: 100%;
           text-align: right;
           font-size: 0.8em; }
+  .region-content form#feed-source-node-form button#edit-submit .glyphicon {
+    display: none; }
 
 /* JS-specific */
 /* Feed Item Listing */
