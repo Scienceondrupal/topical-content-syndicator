@@ -63,7 +63,13 @@
         }
       }
     }
+  }
 
+  /* Create Source Feed */
+  form#feed-source-node-form {
+    button#edit-submit {
+      .glyphicon { display: none; }
+    }
   }
 }
 
