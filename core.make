@@ -9,4 +9,4 @@ projects[drupal][version] = 7.35
 projects[tcs_profile][type] = profile
 projects[tcs_profile][download][type] = git
 projects[tcs_profile][download][url] = git@github.com:bluedotlab/topical-content-syndicator.git
-projects[tcs_profile][download][branch] = feature-1202-1203-comments-6331-6332
+projects[tcs_profile][download][branch] = feature-1281-manage-source-feeds
