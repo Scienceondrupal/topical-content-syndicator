@@ -1,7 +1,7 @@
 name = TCS Manage
 description = Management tools: views
 core = 7.x
-package = Features
+package = TCS
 version = 7.x-1.0
 project = tcs_manage
 dependencies[] = tcs_import
