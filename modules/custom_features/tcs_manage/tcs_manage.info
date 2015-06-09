@@ -1,0 +1,16 @@
+name = TCS Manage
+description = Management tools: views
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = tcs_manage
+dependencies[] = tcs_import
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[menu_links][] = user-menu_manage:manage/source-feeds
+features[menu_links][] = user-menu_source-feeds:manage/source-feeds
+features[views_view][] = manage_source_feeds
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][menu] = menu

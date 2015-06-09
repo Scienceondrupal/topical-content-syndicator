@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TCS Manage feature.
+ */
+
+include_once 'tcs_manage.features.inc';
