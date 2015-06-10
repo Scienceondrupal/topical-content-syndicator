@@ -75,8 +75,40 @@ function tcs_content_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'feed_items');
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'homepage');
+  /* Display: Home for Admins/Mgrs */
+  $handler = $view->new_display('page', 'Home for Admins/Mgrs', 'homepage');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    3 => '3',
+    4 => '4',
+  );
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'Nothing is being shown here because the syndicator hasn\'t been set up to pull in any content yet.
+You can pull content from different sources using RSS or Atom. To add your first "source feed", click on Add > Source Feed in the menu above. Add a title for reference, paste in your RSS/Atom URL, then click Save - and you\'ll be all set!
+<br/><br/>To build the volume and relevance of your syndicator\'s content, you can add as many Source Feeds as you like, and their content will be imported and displayed in a combined "stream" in chronological order on the homepage.<br/><br/>You may also like to describe your syndicator\'s goals, sources and intended audience by going to the About page, then clicking "Edit".<br/>
+For more, see the Topical Content Syndicator project\'s README on Github - <a href="https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md" target="_blank">https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['path'] = 'home';
+
+  /* Display: Home for Public */
+  $handler = $view->new_display('page', 'Home for Public', 'homepage_public');
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'Nothing to see here yet. You can read up on:<br/>
+* this community\'s goals on their About page<br/>
+* the Topical Content Syndicator project on Github<br/><br/>
+Check back soon for more updates!';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['path'] = 'home';
   $export['list_feed_items'] = $view;
 
