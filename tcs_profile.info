@@ -55,4 +55,7 @@ dependencies[] = views_ui
 ; Features
 dependencies[] = tcs_access
 dependencies[] = tcs_config
+dependencies[] = tcs_content
+dependencies[] = tcs_import
+dependencies[] = tcs_manage
 dependencies[] = tcs_page
