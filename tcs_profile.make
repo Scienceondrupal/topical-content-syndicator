@@ -12,6 +12,7 @@ projects[drupal][version] = 7.34
 
 ; d.o modules.
 projects[admin_menu][version] = 3.0-rc4
+projects[better_formats][version] = 1.0-beta1
 projects[coder][version] = 2.2
 projects[ctools][version] = 1.7
 projects[date][version] = 2.8
@@ -31,6 +32,7 @@ projects[jquery_update][version] = 2.5
 projects[libraries][version] = 2.2
 projects[link][version] = 1.2
 projects[maillog][version] = 1.x-dev
+projects[markdown][version] = 1.2
 projects[module_filter][version] = 2.0-alpha2
 projects[pathauto][version] = 1.2
 projects[rules][version] = 2.9
