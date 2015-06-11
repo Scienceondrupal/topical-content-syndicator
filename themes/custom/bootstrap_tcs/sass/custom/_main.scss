@@ -71,6 +71,26 @@
       .glyphicon { display: none; }
     }
   }
+
+  /* Sidebar Trigger */
+  #boxes-box-tcs_content_side_trigger {
+    button { 
+      font-size: 0.9em; 
+      margin-bottom: 1.5em;
+    }
+    button:after {
+      font-family: FontAwesome;
+      content: "\f061";
+      padding-left: 0.3em;
+    }
+    .boxes-box-controls {
+      display: none;
+    }
+  }
+}
+
+.region-sidebar-first {
+  overflow-y: auto;
 }
 
 /* JS-specific */

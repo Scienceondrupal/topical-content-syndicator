@@ -31,7 +31,10 @@ stylesheets[all][] = css/style.css
 ;; Settings
 ;;;;;;;;;;;;;;;;;;;;;
 
+; Switch off logo
 settings[toggle_logo] = 0
+; Show "home" breadcrumb
+settings[bootstrap_breadcrumb_home] = 1
 
 ; For information on choosing the desired method, please read the Drupal
 ; Bootstrap sub-theme "how-to" documentation:

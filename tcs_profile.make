@@ -13,6 +13,8 @@ projects[drupal][version] = 7.34
 ; d.o modules.
 projects[admin_menu][version] = 3.0-rc4
 projects[better_formats][version] = 1.0-beta1
+projects[block_class][version] = 2.1
+projects[boxes][version] = 1.2
 projects[coder][version] = 2.2
 projects[ctools][version] = 1.7
 projects[date][version] = 2.8
@@ -48,6 +50,8 @@ libraries[autopager][download][type] = "get"
 libraries[autopager][download][url] = "http://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js"
 libraries[autopager][directory_name] = "js"
 libraries[autopager][destination] = "/modules/contrib/views_infinite_scroll"
+libraries[Bootstrap-Offcanvas][download][type] = "file"
+libraries[Bootstrap-Offcanvas][download][url] = "https://github.com/iamphill/Bootstrap-Offcanvas/archive/1.4.0.tar.gz"
 
 ; d.o themes.
 projects[bootstrap][version] = "3.1-beta2"

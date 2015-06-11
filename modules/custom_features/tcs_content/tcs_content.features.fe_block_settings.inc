@@ -12,8 +12,51 @@ function tcs_content_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['boxes-tcs_content_side_trigger'] = array(
+    'cache' => -2,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'tcs_content_side_trigger',
+    'module' => 'boxes',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap_tcs' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'bootstrap_tcs',
+        'weight' => -11,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['views--exp-list_feed_items-homepage'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '-exp-list_feed_items-homepage',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap_tcs' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'bootstrap_tcs',
+        'weight' => -10,
+      ),
+    ),
+    'title' => 'Filters',
+    'visibility' => 1,
+  );
+
   $export['views-list_feed_items-feed_items'] = array(
     'cache' => -1,
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'list_feed_items-feed_items',
     'module' => 'views',
