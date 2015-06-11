@@ -38,6 +38,8 @@ projects[pathauto][version] = 1.2
 projects[rules][version] = 2.9
 projects[strongarm][version] = 2.0
 projects[token][version] = 1.5
+projects[uuid][version] = 1.0-alpha6
+projects[uuid_features][version] = 1.0-alpha4
 projects[views][version] = 3.11
 projects[views_infinite_scroll][version] = 1.1
 
