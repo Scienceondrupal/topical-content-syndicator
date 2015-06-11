@@ -3,7 +3,3 @@
 name = "Topical Content Syndicator: post-install"
 description = "Install/post-install tasks for a new TCS site"
 core = "7.x"
-
-dependencies[] = tcs_content
-dependencies[] = tcs_import
-dependencies[] = tcs_manage
