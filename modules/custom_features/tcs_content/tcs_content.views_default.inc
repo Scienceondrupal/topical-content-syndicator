@@ -89,10 +89,12 @@ function tcs_content_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'Nothing is being shown here because the syndicator hasn\'t been set up to pull in any content yet.
-You can pull content from different sources using RSS or Atom. To add your first "source feed", click on Add > Source Feed in the menu above. Add a title for reference, paste in your RSS/Atom URL, then click Save - and you\'ll be all set!
-<br/><br/>To build the volume and relevance of your syndicator\'s content, you can add as many Source Feeds as you like, and their content will be imported and displayed in a combined "stream" in chronological order on the homepage.<br/><br/>You may also like to describe your syndicator\'s goals, sources and intended audience by going to the About page, then clicking "Edit".<br/>
-For more, see the Topical Content Syndicator project\'s README on Github - <a href="https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md" target="_blank">https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md</a>';
+  $handler->display->display_options['empty']['area']['content'] = '<p>Welcome to your content syndicator!</p>
+<p>There\'s nothing to show here yet because the syndicator still needs to be set up to pull in content from the RSS or Atom feeds that you choose for your topic or community.</p>
+<p>To add your first "Source Feed", click on Add > <a href="node/add/feed-source">Source Feed</a> in the menu above. Add a title for reference, paste in your RSS/Atom URL, then click Save - and you\'ll be all set!</p>
+<p>When you add a number of Source Feeds, their content will be imported regularly and displayed in a combined "stream" in chronological order on the home page.</p>
+<p>You may also like to describe your syndicator\'s goals, sources and intended audience by going to the <a href="about">About</a> page, then clicking "Edit".<br/>
+<p>For more, see the Topical Content Syndicator project\'s README on Github - <a href="https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md" target="_blank">https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md</a></p>';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['path'] = 'home';
 
@@ -104,11 +106,17 @@ For more, see the Topical Content Syndicator project\'s README on Github - <a hr
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'Nothing to see here yet. You can read up on:<br/>
-* this community\'s goals on their About page<br/>
-* the Topical Content Syndicator project on Github<br/><br/>
+  $handler->display->display_options['empty']['area']['content'] = 'Welcome to our content syndicator!
+
+There aren\'t any articles to see here yet, but once we\'re set up we\'ll show a stream of content pulled from a selection of interesting, relevant and timely sources, for your reading pleasure.
+
+In the meantime, however, check out:
+
+* our goals on the [About](about) page
+* the [Topical Content Syndicator project](https://github.com/bluedotlab/topical-content-syndicator) on Github
+
 Check back soon for more updates!';
-  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['empty']['area']['format'] = 'tcs_markdown_filter';
   $handler->display->display_options['path'] = 'home';
   $export['list_feed_items'] = $view;
 
