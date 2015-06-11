@@ -127,6 +127,7 @@ function tcs_content_views_default_views() {
     3 => '3',
     4 => '4',
   );
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -144,6 +145,7 @@ function tcs_content_views_default_views() {
 
   /* Display: Home for Public */
   $handler = $view->new_display('page', 'Home for Public', 'homepage_public');
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
