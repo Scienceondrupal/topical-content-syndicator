@@ -19,3 +19,48 @@ function tcs_import_batch_alter(&$batch) {
     $batch['form_state']['redirect'] = '<front>';
   }
 }
+
+/**
+ * Implements hook_node_view().
+ */
+function tcs_import_node_view($node, $view_mode, $langcode) {
+
+  switch($node->type) {
+    case 'feed_source':
+
+      // Rewrite the title of Feed Source node pages.
+      drupal_set_title('Source Feed: ' . $node->title);
+
+      switch($view_mode) {
+        case 'full':
+          // Get the Feed Source configuration.
+          $importer_id = feeds_get_importer_id($node->type);
+          $source = feeds_source($importer_id, $node->nid);
+          $feed_cfg = $source->getConfig();
+
+          // Store any feed sources we find.
+          $urls = array();
+
+          // Parse the Feed configuration.
+          if (!empty($feed_cfg)) {
+            foreach($feed_cfg as $type => $feed_data) {
+              if (!empty($feed_data['source'])) {
+                $urls[] = l($feed_data['source'], $feed_data['source'], array('attributes' => array('target' => '_blank')));
+              }
+            }
+          }
+
+          if (!empty($urls)) {
+            $node->content ['feed_source_url'] = array(
+              '#prefix' => 'Feed: ',
+              '#markup' => implode(', ', $urls),
+              '#weight' => 1,
+            );
+          }
+          break;
+      }
+  
+      break;
+
+  }
+}
