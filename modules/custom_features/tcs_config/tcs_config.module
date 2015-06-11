@@ -5,3 +5,14 @@
  */
 
 include_once 'tcs_config.features.inc';
+
+/**
+ * Implements hook_mail_alter().
+ */
+function tcs_config_mail_alter(&$message) {
+  // Adds some explanatory text to user account request notification to admins
+  // Originally, it wasn't clear how to activate an account, or that a role should be set
+  if ($message['key'] == 'register_pending_approval_admin') {
+    $message['body'][] = t('To activate their account, set Status to Active and check the appropriate role - either "Member" (who can read content and save new filters), "Manager" (who can additionally import new source feeds) or "Administrator" (who has wide access to site configuration, so grant with care).');
+  }
+}
