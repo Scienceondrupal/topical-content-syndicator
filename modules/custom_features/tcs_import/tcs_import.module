@@ -19,3 +19,16 @@ function tcs_import_batch_alter(&$batch) {
     $batch['form_state']['redirect'] = '<front>';
   }
 }
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function tcs_import_preprocess_node(&$vars) {
+  switch ($vars['type']) {
+    case 'feed_source':
+      // Rewrite the title of Feed Source node pages.
+      $vars['title'] = 'Source Feed: ' . $vars['title'];
+      break;
+
+  }
+}
