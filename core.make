@@ -8,5 +8,6 @@ projects[drupal][version] = 7.35
 
 projects[tcs_profile][type] = profile
 projects[tcs_profile][download][type] = git
-projects[tcs_profile][download][url] = git@github.com:bluedotlab/topical-content-syndicator.git
-projects[tcs_profile][download][branch] = feature-1281-manage-source-feeds
+projects[tcs_profile][download][url] = /Users/ashepherd/blue-dot-lab/tnms-tcs/make
+;projects[tcs_profile][download][url] = git@github.com:bluedotlab/topical-content-syndicator.git
+;projects[tcs_profile][download][branch] = feature-1281-manage-source-feeds
