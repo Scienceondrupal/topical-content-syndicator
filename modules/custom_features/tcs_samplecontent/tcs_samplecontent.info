@@ -14,5 +14,5 @@ __drupal_alter_by_ref[][node][page] = page
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[menu_custom][] = main-menu
-features[menu_links][] = main-menu_about:about
+features[menu_links][] = main-menu_about:node/1
 features[uuid_node][] = 706b26dc-f2b3-4fce-8fb7-2325452d63d8

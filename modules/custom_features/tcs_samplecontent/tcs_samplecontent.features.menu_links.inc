@@ -11,13 +11,16 @@ function tcs_samplecontent_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: main-menu_about:node/1
-  $menu_links['main-menu_about:about'] = array(
+  $menu_links['main-menu_about:node/1'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'about',
+    'link_path' => 'node/1',
     'router_path' => 'node/%',
     'link_title' => 'About',
     'options' => array(
-      'identifier' => 'main-menu_about:about',
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_about:node/1',
     ),
     'module' => 'menu',
     'hidden' => 0,
