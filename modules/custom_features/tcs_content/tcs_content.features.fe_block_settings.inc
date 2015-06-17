@@ -52,7 +52,7 @@ function tcs_content_default_fe_block_settings() {
         'weight' => -11,
       ),
     ),
-    'title' => 'Filter',
+    'title' => 'Filters',
     'visibility' => 1,
   );
 
@@ -74,7 +74,7 @@ function tcs_content_default_fe_block_settings() {
         'weight' => -10,
       ),
     ),
-    'title' => 'Filter',
+    'title' => 'Filters',
     'visibility' => 1,
   );
 
