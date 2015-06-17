@@ -135,11 +135,13 @@ function tcs_content_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = '<p>Welcome to your content syndicator!</p>
-<p>There\'s nothing to show here yet because the syndicator still needs to be set up to pull in content from the RSS or Atom feeds that you choose for your topic or community.</p>
-<p>To add your first "Source Feed", click on Add > <a href="node/add/feed-source">Source Feed</a> in the menu above. Add a title for reference, paste in your RSS/Atom URL, then click Save - and you\'ll be all set!</p>
-<p>When you add a number of Source Feeds, their content will be imported regularly and displayed in a combined "stream" in chronological order on the home page.</p>
+<p>There\'s nothing to show here yet because the syndicator still needs to be set up to pull in content from your chosen RSS or Atom feeds:</p>
+<ul>
+<li>Add your first "Source Feed" by clicking on Add > <a href="node/add/feed-source">Source Feed</a> in the menu above. Add a title for reference, paste in your RSS/Atom URL, then Save - and you\'re set!</li>
+<li>All the Source Feeds you add will be imported regularly and displayed in a combined "stream" in chronological order on the home page.</li>
+</ul>
 <p>You may also like to describe your syndicator\'s goals, sources and intended audience by going to the <a href="about">About</a> page, then clicking "Edit".<br/>
-<p>For more, see the Topical Content Syndicator project\'s README on Github - <a href="https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md" target="_blank">https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md</a></p>';
+<p>For more on the Topical Content Syndicator project, check out our <a href="https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md" target="_blank">README on Github</a>.</p>';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['path'] = 'home';
 
