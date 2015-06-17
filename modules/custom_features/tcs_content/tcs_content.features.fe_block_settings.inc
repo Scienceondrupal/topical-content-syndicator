@@ -38,7 +38,7 @@ function tcs_content_default_fe_block_settings() {
     'delta' => '-exp-list_feed_items-homepage',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => '<front>',
     'roles' => array(
       'administrator' => 3,
       'manager' => 4,
@@ -52,8 +52,30 @@ function tcs_content_default_fe_block_settings() {
         'weight' => -11,
       ),
     ),
-    'title' => '',
-    'visibility' => 0,
+    'title' => 'Filter',
+    'visibility' => 1,
+  );
+
+  $export['views-83fa14761a25efc875c7db192014e55c'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => '83fa14761a25efc875c7db192014e55c',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(
+      'anonymous user' => 1,
+    ),
+    'themes' => array(
+      'bootstrap_tcs' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'bootstrap_tcs',
+        'weight' => -10,
+      ),
+    ),
+    'title' => 'Filter',
+    'visibility' => 1,
   );
 
   $export['views-list_feed_items-feed_items'] = array(
