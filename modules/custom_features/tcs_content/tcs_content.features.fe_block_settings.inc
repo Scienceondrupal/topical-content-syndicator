@@ -18,7 +18,7 @@ function tcs_content_default_fe_block_settings() {
     'delta' => 'tcs_content_side_trigger',
     'module' => 'boxes',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
       'bootstrap_tcs' => array(
@@ -29,7 +29,7 @@ function tcs_content_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['views--exp-list_feed_items-homepage'] = array(
