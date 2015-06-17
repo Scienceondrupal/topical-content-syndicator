@@ -34,9 +34,11 @@ function tcs_samplecontent_uuid_features_default_content() {
 **bold**',
         'summary' => '',
         'format' => 'tcs_markdown_filter',
-        'safe_value' => '<p><em>test</em>
-<strong>bold</strong></p>
-',
+        'safe_value' => "The owner of this syndicator hasn't yet filled out a summary of their community's goals, sources and intended audience.
+
+Please check back soon!
+
+For more on the Topical Content Syndicator project in general, please see the (README on Github)[https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md]",
         'safe_summary' => '',
       ),
     ),
