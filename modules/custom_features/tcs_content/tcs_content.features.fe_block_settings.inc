@@ -22,10 +22,10 @@ function tcs_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'bootstrap_tcs' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'content',
+        'status' => 1,
         'theme' => 'bootstrap_tcs',
-        'weight' => 0,
+        'weight' => -12,
       ),
     ),
     'title' => '',
@@ -42,13 +42,14 @@ function tcs_content_default_fe_block_settings() {
     'roles' => array(
       'administrator' => 3,
       'manager' => 4,
+      'member' => 5,
     ),
     'themes' => array(
       'bootstrap_tcs' => array(
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'bootstrap_tcs',
-        'weight' => -12,
+        'weight' => -11,
       ),
     ),
     'title' => '',
