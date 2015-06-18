@@ -41,7 +41,7 @@ function tcs_content_views_pre_render(&$view) {
       }
     }
     if ($submitted_filter) {
-      $view->empty['area']->options['content'] = 'No results';
+      $view->empty['area']->options['content'] = 'No results - try a different filter, or return to the <a href="/">main stream</a>';
     }
   }
 }
