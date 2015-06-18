@@ -30,8 +30,11 @@ function tcs_samplecontent_uuid_features_default_content() {
   'body' => array(
     'und' => array(
       0 => array(
-        'value' => '*test*
-**bold**',
+        'value' => "The owner of this syndicator hasn't yet filled out a summary of their community's goals, sources and intended audience.
+
+Please check back soon!
+
+For more on the Topical Content Syndicator project in general, please see the (README on Github)[https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md]",
         'summary' => '',
         'format' => 'tcs_markdown_filter',
         'safe_value' => "The owner of this syndicator hasn't yet filled out a summary of their community's goals, sources and intended audience.
