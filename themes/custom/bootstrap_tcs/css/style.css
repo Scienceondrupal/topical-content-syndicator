@@ -6847,7 +6847,7 @@ html.js input.form-autocomplete {
   background-image: none; }
 
 body {
-  position: relative; }
+  position: relative !important; }
   body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-vertical.admin-sw .navbar {
     margin-left: 260px; }
   body.navbar-is-fixed-top {
