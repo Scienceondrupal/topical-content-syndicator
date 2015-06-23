@@ -49,7 +49,7 @@ function tcs_manage_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
-    'parent_identifier' => 'user-menu_:manage/source-feeds',
+    'parent_identifier' => 'user-menu_manage:manage/source-feeds',
   );
   // Translatables
   // Included for use with string extractors like potx.
