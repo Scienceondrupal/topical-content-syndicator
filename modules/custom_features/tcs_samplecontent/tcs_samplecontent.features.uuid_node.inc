@@ -41,7 +41,7 @@ For more on the Topical Content Syndicator project in general, please see the (R
 
 Please check back soon!
 
-For more on the Topical Content Syndicator project in general, please see the (README on Github)[https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md]",
+For more on the Topical Content Syndicator project in general, please see the [README on Github](https://github.com/bluedotlab/topical-content-syndicator/blob/master/README.md)",
         'safe_summary' => '',
       ),
     ),
