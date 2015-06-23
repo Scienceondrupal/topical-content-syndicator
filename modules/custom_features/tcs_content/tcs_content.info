@@ -28,6 +28,7 @@ features[ds_layout_settings][] = node|feed_item|feed_item_list_item
 features[ds_view_modes][] = feed_item_list_item
 features[fe_block_settings][] = boxes-tcs_content_side_trigger
 features[fe_block_settings][] = views--exp-list_feed_items-homepage
+features[fe_block_settings][] = views-83fa14761a25efc875c7db192014e55c
 features[fe_block_settings][] = views-list_feed_items-feed_items
 features[features_api][] = api:2
 features[field_base][] = field_feed_item_description
