@@ -89,8 +89,19 @@
   }
 }
 
+/* Sidebar */
 .region-sidebar-first {
+  /* Prevent scroll bar on mobile slide-out */
   overflow-y: auto;
+}
+
+/* Ribbon */
+body .github-fork-ribbon-wrapper.left-bottom {
+  .github-fork-ribbon {
+    background-color: #333;
+    top: 75px;
+    left: -41px;
+  }
 }
 
 /* JS-specific */
