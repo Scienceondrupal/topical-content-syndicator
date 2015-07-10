@@ -25,7 +25,8 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/style.css
+stylesheets-conditional[!IE][all][] = css/style.css
+stylesheets-conditional[lte IE 9][all][] = css/style-ie.css
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Settings
