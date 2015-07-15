@@ -12,6 +12,7 @@ projects[better_formats][version] = 1.0-beta1
 projects[block_class][version] = 2.1
 projects[boxes][version] = 1.2
 projects[coder][version] = 2.2
+projects[conditional_styles][version] = 2.2
 projects[ctools][version] = 1.7
 projects[date][version] = 2.8
 projects[devel][version] = 1.5
